@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_template_settings_admin,template.settings.admin,model_template_settings,,1,1,1,1
+access_add_section_admin,add.sections.admin,model_add_sections,,1,1,1,1
+access_template_list_admin,template.list.admin,model_template_list,,1,1,1,1
+access_template_category_admin,template.category.admin,model_template_category,,1,1,1,1
+access_template_request_admin,template.request.admin,model_template_request,,1,1,1,1
+access_print_wizard_admin,print.wizard.admin,model_print_wizard,,1,1,1,1
