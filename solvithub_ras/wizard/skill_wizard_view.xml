@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_skill_wizard" model="ir.ui.view">
+            <field name="name">skill.wizard.form</field>
+            <field name="model">skill.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Skill">
+                    <div>
+                        <field name="skill_id"/>
+                    </div>
+                    <group>
+                        <field name="job_position_id" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button string='Confirm' name="skill_fetch_action" type="object" class="btn-primary"/>
+                        <!-- <button string='Attach' name="import_attach" type="object"/> -->
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_skill_wizard" model="ir.actions.act_window">
+            <field name="name">Skill</field>
+            <field name="res_model">skill.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_skill_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_normalised_skill_wizard" model="ir.ui.view">
+            <field name="name">normalised.wizard.form</field>
+            <field name="model">normalised.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Normalised Skill">
+                    <div>
+                        <field name="normalised_skills">
+                            <tree editable= "bottom" create="0" edit="0" delete="0">
+                                <field name="skill_id" string="Skill Name"/>
+                                <field name="ignore"/>
+                                <field name="synonym"/>
+                                <field name="synonym_name"/>
+                                
+                            </tree>
+                            
+                        </field>    
+                        
+                       
+                    </div>                 
+                    <footer>
+                        <!-- <button string='Confirm' name="skill_fetch_action" type="object" class="btn-primary"/> -->
+                        <button string="Cancel" class="btn-secondary" special="cancel" style="background-color:#7C7BAD;color:white"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_normalised_skill_wizard" model="ir.actions.act_window">
+            <field name="name">Normalised Skill</field>
+            <field name="res_model">normalised.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_normalised_skill_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_normalised_skillwizard" model="ir.ui.view">
+            <field name="name">normalised.skillwizard.form</field>
+            <field name="model">normalised.skillwizard</field>
+            <field name="arch" type="xml">
+                <form string="Normalised Skill">
+                    <div>
+                        <field name="normalised_skill">
+                            <tree editable= "bottom" create="0" edit="0" delete="0">
+                                <field name="skill_id" string="Skill Name"/>
+                                <field name="ignore"/>
+                                <field name="synonym"/>
+                                <field name="synonym_name"/>
+                                
+                            </tree>
+                            
+                        </field>    
+                        
+                       
+                    </div>                 
+                    <footer>
+                        <!-- <button string='Confirm' name="skill_fetch_action" type="object" class="btn-primary"/> -->
+                        <button string="Cancel" class="btn-secondary" special="cancel" style="background-color:#7C7BAD;color:white"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_normalised_skills_wizard" model="ir.actions.act_window">
+            <field name="name">Normalised Skills</field>
+            <field name="res_model">normalised.skillwizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_normalised_skillwizard"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_euro_no_margin_custom" model="report.paperformat">
+            <field name="name">European A4 without borders</field>
+            <field name="default" eval="False" />
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">45</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">45</field>
+        </record>
+
+        <record id="action_report_job_application" model="ir.actions.report">
+            <field name="name">Agility Resume Template</field>
+            <field name="model">hr.applicant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">solvithub_ras.report_application</field>
+            <field name="report_file">solvithub_ras.report_application</field>
+            <!-- <field name="print_report_name">'Print Badge - %s' % (object.name).replace('/', '')</field> -->
+            <!-- <field name="binding_model_id" eval="False"/> -->
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_job_application_paskon" model="ir.actions.report">
+            <field name="name">Paskon Resume Template</field>
+            <field name="model">hr.applicant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">solvithub_ras.report_application_paskon</field>
+            <field name="report_file">solvithub_ras.report_application_paskon</field>
+            <!-- <field name="print_report_name">'Print Badge - %s' % (object.name).replace('/', '')</field> -->
+            <!-- <field name="paperformat">paperformat_euro_no_margin_custom</field> -->
+            <!-- <field name="binding_model_id" eval="False"/> -->
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- <report
+            id="action_report_job_application"
+            model="hr.applicant"
+            string="Agility Resume Template"
+            report_type="qweb-pdf"
+            name="solvithub_ras.report_application"
+            file="solvithub_ras.report_application"
+            menu="True"
+        /> -->
+
+        <!-- <report
+            id="action_report_job_application_paskon"
+            model="hr.applicant"
+            string="Paskon Resume Template"
+            report_type="qweb-pdf"
+            name="solvithub_ras.report_application_paskon"
+            file="solvithub_ras.report_application_paskon"
+            menu="True"
+            paperformat="paperformat_euro_no_margin_custom"/>
+        /> -->
+    </data>
+</odoo>
